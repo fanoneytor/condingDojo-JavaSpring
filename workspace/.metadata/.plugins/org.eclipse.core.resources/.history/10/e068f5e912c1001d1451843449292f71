@@ -1,0 +1,6 @@
+package com.codingdojo.stefano.servicios;
+
+@
+public interface SaveTravelsService {
+
+}

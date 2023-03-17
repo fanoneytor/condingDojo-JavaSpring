@@ -1,0 +1,36 @@
+package com.codingdojo.stefano.controllers;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.codingdojo.stefano.models.Dojo;
+
+@Controller
+@RequestMapping("/dojos")
+public class DojoController {
+	@GetMapping("/")
+	public String dashboard() {
+		return "dashboard.jsp";
+	}
+	
+	@GetMapping("/new")
+	public String nuevoDojo() {
+		return "new.jsp";
+	}
+	
+	@PostMapping("/create")
+	public String createDojo(@Valid @ModelAttribute("dojo") Dojo dojo,
+							 BindingResult result) {
+		if(result.hasErrors()) {
+			return "/new";
+		}else {
+			return"/dashboard";
+		}		
+	}
+}

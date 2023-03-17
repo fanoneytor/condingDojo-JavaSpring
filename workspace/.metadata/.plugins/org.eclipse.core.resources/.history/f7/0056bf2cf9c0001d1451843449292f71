@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Omikuji</title>
+</head>
+<body>
+	<div class="container">
+		<form action="">
+			<ul>
+				<li>
+					<label for="numero">Ingrese algun numero del 5 al 25</label>
+					<input type="number" />
+				</li>
+				<li>
+					<label for="nombreCiudad">Ingrese el nombre de alguna ciudad</label>
+					<input type="text" />
+				</li>	
+			</ul>
+		
+		</form>
+	</div>
+
+</body>
+</html>

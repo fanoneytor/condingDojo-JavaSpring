@@ -1,0 +1,36 @@
+package com.codingdojo.stefano.modelos;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="projects")
+public class Project {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	
+	@NotNull
+	@Size(min=2, max=50)
+	private String title;
+	
+	@NotNull
+	@Size(min=3, max=255)
+	private String description;
+	
+	@Future
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date dueDate;
+	
+	@Column(updatable=false)
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date createdAt;
+	
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date updatedAt;
+
+}

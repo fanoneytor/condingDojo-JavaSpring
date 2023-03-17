@@ -1,0 +1,5 @@
+package com.codingdojo.stefano.repository;
+
+public interface NinjaRepository {
+
+}

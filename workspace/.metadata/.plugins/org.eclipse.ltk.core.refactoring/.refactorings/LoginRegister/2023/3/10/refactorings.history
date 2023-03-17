@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LoginRegister/src/main/webapp/WEB-INF/NewFile.jsp&apos; to &apos;dashboard.jsp&apos;" description="Rename resource &apos;NewFile.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/NewFile.jsp" name="dashboard.jsp" stamp="1678414314915" updateReferences="true"/>
+</session>

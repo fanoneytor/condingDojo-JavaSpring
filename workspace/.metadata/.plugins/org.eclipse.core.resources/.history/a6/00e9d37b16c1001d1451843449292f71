@@ -1,0 +1,14 @@
+package com.codingdojo.stefano.controladores;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+@RequestMapping("/gastos")
+public interface GastosController {
+	
+	@RequestMapping("/")
+	public String dashboard() {
+		return "dashboard.jsp";
+	}
+
+}

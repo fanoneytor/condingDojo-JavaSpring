@@ -1,0 +1,8 @@
+package com.codingdojo.stefano.repositorios;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SaveTravelsRepository extends Crude {
+
+}

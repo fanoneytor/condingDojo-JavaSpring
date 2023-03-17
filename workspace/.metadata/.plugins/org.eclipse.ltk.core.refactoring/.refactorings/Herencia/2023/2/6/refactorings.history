@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.codingdojo.stefano.Cuadrardo.java&apos; to &apos;Cuadrado.java&apos;&#x0D;&#x0A;- Original project: &apos;Herencia&apos;&#x0D;&#x0A;- Original element: &apos;com.codingdojo.stefano.Cuadrardo.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.codingdojo.stefano.Cuadrado.java&apos;" description="Rename compilation unit &apos;Cuadrardo.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.codingdojo.stefano{Cuadrardo.java" name="Cuadrado.java" references="false" stamp="1675992265360" version="1.0"/>
+</session>

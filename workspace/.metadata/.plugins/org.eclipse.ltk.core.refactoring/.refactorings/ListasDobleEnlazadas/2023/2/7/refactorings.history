@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;dobleEnlazada.Dll.java&apos; to &apos;DLL.java&apos;&#x0D;&#x0A;- Original project: &apos;ListasDobleEnlazadas&apos;&#x0D;&#x0A;- Original element: &apos;dobleEnlazada.Dll.java&apos;&#x0D;&#x0A;- Renamed element: &apos;dobleEnlazada.DLL.java&apos;" description="Rename compilation unit &apos;Dll.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;dobleEnlazada{Dll.java" name="DLL.java" references="false" stamp="1676590344949" version="1.0"/>
+</session>

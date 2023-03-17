@@ -1,0 +1,12 @@
+package com.codingdojo.stefano.modelos;
+
+public class OmikujiModel {
+	private int numero;
+	private String nombreCiudad;
+	private String nombrePersona;
+	private String profesion;
+	private String serVivo;
+	private String algoBueno;
+	
+
+}

@@ -1,0 +1,28 @@
+package com.codingdojo.stefano.controladores;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.codingdojo.stefano.servicios.AppService;
+
+@Controller
+public class GastoController {
+	
+	@Autowired
+	private AppService service;
+	
+	@GetMapping("/")
+	public String dashboard(@Valid @ModelAttribute("nuevoGasto") String nuevoGasto,
+							Model model) {
+		
+		model.addAttribute("gastos", service.findGastos());
+		
+		return "dashboard.jsp";
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ReciboDeHooper/src/main/resources/static/cdd&apos; to &apos;css&apos;" description="Rename resource &apos;cdd&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/cdd" name="css" stamp="1678495824025" updateReferences="true"/>
+</session>

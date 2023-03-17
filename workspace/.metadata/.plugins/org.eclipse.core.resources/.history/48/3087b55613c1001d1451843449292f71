@@ -1,0 +1,116 @@
+package com.codingdojo.stefano.modelos;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@Table(name="detalle_gastos")
+public class SaveTravelsModelo {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@NotEmpty(message="El campo es obligatorio.")
+	@Size(min=2, max=50, message="El gasto debe tener entre 2 y 50 caracteres.")
+	private String nombre_gasto;
+	
+	@NotEmpty(message="El campo es obligatorio.")
+	@Size(min=2, max=50, message="El gasto debe tener entre 2 y 50 caracteres.")
+	private String proveedor;
+	
+	@NotEmpty(message="El campo es obligatorio.")
+	private float valor;
+	
+	@NotEmpty(message="El campo es obligatorio.")
+	@Size(min=2, max=50, message="El gasto debe tener entre 2 y 50 caracteres.")
+	private String detalle;
+	
+	@Column(updatable = false)
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date createdAt;
+	
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date updatedAt;
+
+	public SaveTravelsModelo() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNombre_gasto() {
+		return nombre_gasto;
+	}
+
+	public void setNombre_gasto(String nombre_gasto) {
+		this.nombre_gasto = nombre_gasto;
+	}
+
+	public String getProveedor() {
+		return proveedor;
+	}
+
+	public void setProveedor(String proveedor) {
+		this.proveedor = proveedor;
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+	public String getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(String detalle) {
+		this.detalle = detalle;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	
+	@PrePersist
+	protected void onCreate() {
+		this.createdAt = new Date();
+	}
+	
+	@PreUpdate
+	protected void onUpdate() {
+		this.updatedAt = new Date();
+	}
+}

@@ -1,0 +1,5 @@
+1. Básico: imprime todos los números enteros del 0 al 150.
+ 2. Múltiplos de cinco: imprime todos los múltiplos de 5 entre 5 y 1,000.
+ 3. Contar, a la manera del Dojo: imprime números enteros del 1 al 100. Si es divisible por 5, imprime "Coding” en su lugar. Si es divisible por 10, imprime "Coding Dojo".
+ 4. Whoa. Es un gran idiota: agrega los enteros impares del 0 al 500,000, e imprime la suma final.
+ 5. Cuenta regresiva de a 4: imprime números positivos comenzando desde el 2018, en cuenta regresiva de 4 en 4.

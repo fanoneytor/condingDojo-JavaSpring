@@ -1,0 +1,16 @@
+package com.codingdojo.stefano.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.codingdojo.stefano.repository.DojoRepository;
+import com.codingdojo.stefano.repository.NinjaRepository;
+
+@Service
+public class AppService {
+	
+	@Autowired
+	private NinjaRepository repoNinja;
+	private DojoRepository repoDojo;
+
+}

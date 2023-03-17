@@ -1,0 +1,21 @@
+package com.codingdojo.stefano.controladores;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.codingdojo.stefano.servicios.AppService;
+
+@Controller
+@RequestMapping("/projects")
+public class ProjectController {
+	
+	@Autowired
+	private AppService servicio;
+	
+	@GetMapping("/new")
+	public String newProject() {
+		return "new.jsp
+	}
+
+}

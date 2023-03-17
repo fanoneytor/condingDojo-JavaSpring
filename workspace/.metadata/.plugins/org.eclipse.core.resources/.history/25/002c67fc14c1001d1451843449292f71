@@ -1,0 +1,10 @@
+package com.codingdojo.stefano.repositorios;
+
+import org.springframework.stereotype.Repository;
+
+import com.codingdojo.stefano.modelos.Gasto;
+
+@Repository
+public interface SaveTravelsRepository extends CrudeRepository<Gasto, Long> {
+
+}

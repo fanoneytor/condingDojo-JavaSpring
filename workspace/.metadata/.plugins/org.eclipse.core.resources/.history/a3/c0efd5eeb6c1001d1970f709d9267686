@@ -1,0 +1,9 @@
+package com.codingdojo.stefano.repository;
+
+import com.codingdojo.stefano.models.Ninja;
+
+public interface NinjaRepository extends CrudeRepository<Ninja, Long>{
+	
+	
+
+}

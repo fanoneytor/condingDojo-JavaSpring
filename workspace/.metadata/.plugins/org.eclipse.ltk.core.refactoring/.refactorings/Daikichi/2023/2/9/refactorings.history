@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Daikichi/src/main/WEAPP&apos; to &apos;webapp&apos;" description="Rename resource &apos;WEAPP&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/WEAPP" name="webapp" stamp="1677592812802" updateReferences="true"/>
+</session>

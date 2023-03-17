@@ -1,0 +1,96 @@
+package com.codingdojo.stefano.controladores;
+
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.codingdojo.stefano.modelos.Project;
+import com.codingdojo.stefano.modelos.User;
+import com.codingdojo.stefano.servicios.AppService;
+
+@Controller
+@RequestMapping("/projects")
+public class ProjectController {
+	
+	@Autowired
+	private AppService servicio;
+	
+	@GetMapping("/new")
+	public String newProject(@ModelAttribute("project") Project project,
+							 HttpSession session) {
+		//REVISAMOS LA SESION
+		User currentUser = (User) session.getAttribute("userSession");
+		
+		if(currentUser == null) {
+			return "redirect:/";
+		}
+		return "new.jsp";
+	}
+	
+	@PostMapping("/create")
+	public String createProject(@Valid @ModelAttribute("project") Project project,
+								BindingResult result,
+								HttpSession session) {		
+		//REVISAMOS LA SESION
+		User currentUser = (User) session.getAttribute("userSession");
+		
+		if(currentUser == null) {
+			return "redirect:/";
+		}
+		
+		//Revisamos si hay errores en el registro
+		if(result.hasErrors()) {
+			return "new.jsp";
+		}else {
+			//Guardamos el proyecto
+			Project nuevoProyecto = servicio.saveProject(project);
+			//Agregamos a la lista de proyectos a los que me uni.
+			User myUser = servicio.findUser(currentUser.getId()); 
+			myUser.getProjectsJoined().add(nuevoProyecto);  //Agregamos a la lista de proyecto unidos 
+			servicio.saveUsuario(myUser);
+			return "redirect:/dashboard";
+		}
+		
+	}
+	
+	@GetMapping("/join/${projectId}")
+	public String join(@PathVariable("projectId") Long projectId,
+					   HttpSession session) {
+		//REVISAMOS LA SESION
+		User currentUser = (User) session.getAttribute("userSession");
+		
+		if(currentUser == null) {
+			return "redirect:/";
+		}
+		
+		//Metodo en servicio que nos una al proyecto
+		servicio.saveProjectUser(projectId, currentUser.getId());
+		
+		return"redirect:/dashboard";
+		
+	}
+	
+	@GetMapping("/leave/${projectId}")
+	public String leave(@PathVariable("projectId") Long projectId,
+						HttpSession session) {
+		//REVISAMOS LA SESION
+		User currentUser = (User) session.getAttribute("userSession");
+		
+		if(currentUser == null) {
+			return "redirect:/";
+		}
+		
+		//Metodo en Servicio que nos elimine un proyecto
+		servicio.removeProjectUser(projectId, currentUser.getId());
+		return"redirect:/dashboard";		
+	}
+	
+}

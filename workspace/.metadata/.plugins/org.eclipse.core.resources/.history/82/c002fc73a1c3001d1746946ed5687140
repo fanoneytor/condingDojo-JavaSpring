@@ -1,0 +1,19 @@
+package com.codingdojo.stefano.repositorios;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.codingdojo.stefano.modelos.Project;
+import com.codingdojo.stefano.modelos.User;
+
+@Repository
+public interface ProjectRepository extends CrudRepository<Project, Long> {
+	
+	//Seleccionamos algunos proyectos a los que el usuario NO pertence
+	List<Project> findByUsersJoinedNotContains(User user);
+	
+	//Seleccionamos aquellos proyectos a los que el usuario SI pertenece
+	List<Project> finAllByUsersJoined(User user);
+}

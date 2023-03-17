@@ -1,0 +1,19 @@
+package com.codingdojo.stefano.controladores;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.codingdojo.stefano.servicios.AppService;
+
+@Controller
+public interface GastosController {
+	
+	@Autowired
+	private AppService service;
+	
+	@GetMapping("/")
+	public String dashboard() {
+		
+	}
+}

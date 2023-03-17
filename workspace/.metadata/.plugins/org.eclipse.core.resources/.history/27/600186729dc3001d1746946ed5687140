@@ -1,0 +1,11 @@
+package com.codingdojo.stefano.repositorios;
+
+import org.springframework.stereotype.Repository;
+
+import com.codingdojo.stefano.modelos.User;
+
+@Repository
+
+public interface RepositorioUsuarios extends CrudRepository<User, Long> {
+
+}

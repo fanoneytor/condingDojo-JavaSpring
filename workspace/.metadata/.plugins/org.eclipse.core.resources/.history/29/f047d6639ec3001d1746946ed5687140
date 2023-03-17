@@ -1,0 +1,11 @@
+package com.codingdojo.stefano.repositorios;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.codingdojo.stefano.modelos.Project;
+
+@Repository
+public interface ProjectRepository extends CrudRepository<Project, Long> {
+
+}
