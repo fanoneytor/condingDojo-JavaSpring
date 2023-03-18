@@ -8,6 +8,10 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="oner"/>
+			<item value="book"/>
+			<item value="last"/>
+			<item value="gerente"/>
 			<item value="dash"/>
 			<item value="save"/>
 			<item value="Autowired"/>

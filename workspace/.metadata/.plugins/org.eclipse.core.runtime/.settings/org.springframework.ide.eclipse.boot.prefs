@@ -1,12 +1,12 @@
 eclipse.preferences.version=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=15
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=BookClub
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=16
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=AdministradorTareas
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=2.7.9
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Spring Boot Coding dojo
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.example
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=1.8
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=BookClub
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=AdministradorTareas
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.codingdojo.stefano
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
